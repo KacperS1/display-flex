@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Flexbox przykłady</title>
+<style>
+  /* Podstawowe style dla kontenera flex */
+  .flex-container {
+    display: flex;
+    border: 1px solid #333;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  /* Style dla pojedynczych divów */
+  .box {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 4px;
+  }
+
+  /* 1. flex-direction */
+  /* Domyślnie: row */
+  /* Dla innych kierunków: column, row-reverse, column-reverse */
+
+</style>
+</head>
+<body>
+
+<h2>1. flex-direction</h2>
+
+<!-- Domyślny (row) -->
+<div class="flex-container" style="flex-direction: row;">
+  <div class="box">row (domyślny)</div>
+  <div class="box">box 2</div>
+  <div class="box">box 3</div>
+</div>
+
+<!-- column -->
+<div class="flex-container" style="flex-direction: column;">
+  <div class="box">column</div>
+  <div class="box">box 2</div>
+  <div class="box">box 3</div>
+</div>
+
+<!-- row-reverse -->
+<div class="flex-container" style="flex-direction: row-reverse;">
+  <div class="box">row-reverse</div>
+  <div class="box">box 2</div>
+  <div class="box">box 3</div>
+</div>
+
+<!-- column-reverse -->
+<div class="flex-container" style="flex-direction: column-reverse;">
+  <div class="box">column-reverse</div>
+  <div class="box">box 2</div>
+  <div class="box">box 3</div>
+</div>
+
+<h2>2. flex-wrap</h2>
+<!-- Opcje flex-wrap -->
+<div class="flex-container" style="flex-wrap: nowrap;">
+  <div class="box" style="width:150px;">nowrap</div>
+  <div class="box" style="width:150px;">nowrap</div>
+  <div class="box" style="width:150px;">nowrap</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap;">
+  <div class="box" style="width:150px;">wrap</div>
+  <div class="box" style="width:150px;">wrap</div>
+  <div class="box" style="width:150px;">wrap</div>
+  <div class="box" style="width:150px;">wrap</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap-reverse;">
+  <div class="box" style="width:150px;">wrap-reverse</div>
+  <div class="box" style="width:150px;">wrap-reverse</div>
+  <div class="box" style="width:150px;">wrap-reverse</div>
+</div>
+
+<h2>3. justify-content</h2>
+<!-- Opcje justify-content -->
+<div class="flex-container" style="justify-content: center;">
+  <div class="box">center (domyślny)</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<div class="flex-container" style="justify-content: flex-start;">
+  <div class="box">flex-start</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<div class="flex-container" style="justify-content: flex-end;">
+  <div class="box">flex-end</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<div class="flex-container" style="justify-content: space-around;">
+  <div class="box">space-around</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<div class="flex-container" style="justify-content: space-between;">
+  <div class="box">space-between</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<div class="flex-container" style="justify-content: space-evenly;">
+  <div class="box">space-evenly</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<!-- Domyślny justify-content -->
+<!-- Domyślnie: flex-start -->
+<div class="flex-container" style="justify-content: flex-start;">
+  <div class="box">default (flex-start)</div>
+  <div class="box">box</div>
+  <div class="box">box</div>
+</div>
+
+<h2>4. align-items</h2>
+<!-- Opcje align-items -->
+<div class="flex-container" style="align-items: center; height: 150px;">
+  <div class="box" style="height: 50px;">align-items: center</div>
+</div>
+
+<div class="flex-container" style="align-items: flex-start; height: 150px;">
+  <div class="box" style="height: 50px;">align-items: flex-start</div>
+</div>
+
+<div class="flex-container" style="align-items: flex-end; height: 150px;">
+  <div class="box" style="height: 50px;">align-items: flex-end</div>
+</div>
+
+<div class="flex-container" style="align-items: stretch; height: 150px;">
+  <div class="box" style="height: 50px;">align-items: stretch</div>
+</div>
+
+<div class="flex-container" style="align-items: baseline; height: 150px;">
+  <div class="box" style="height: 50px; font-size: 14px;">align-items: baseline</div>
+</div>
+
+<div class="flex-container" style="align-items: normal; height: 150px;">
+  <div class="box" style="height: 50px;">align-items: normal</div>
+</div>
+
+<!-- Domyślny align-items -->
+<!-- Domyślnie: stretch -->
+<div class="flex-container" style="align-items: stretch; height: 150px;">
+  <div class="box" style="height: 50px;">default (stretch)</div>
+</div>
+
+<h2>5. align-content</h2>
+<!-- Opcje align-content -->
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: center;">
+  <div class="box" style="height: 80px;">align-content: center</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: stretch;">
+  <div class="box" style="height: 80px;">align-content: stretch</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: flex-start;">
+  <div class="box" style="height: 80px;">align-content: flex-start</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: flex-end;">
+  <div class="box" style="height: 80px;">align-content: flex-end</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: space-around;">
+  <div class="box" style="height: 80px;">align-content: space-around</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: space-between;">
+  <div class="box" style="height: 80px;">align-content: space-between</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: space-evenly;">
+  <div class="box" style="height: 80px;">align-content: space-evenly</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+<!-- Domyślny align-content -->
+<!-- Domyślnie: stretch -->
+<div class="flex-container" style="flex-wrap: wrap; height: 300px; align-content: stretch;">
+  <div class="box" style="height: 80px;">default (stretch)</div>
+  <div class="box" style="height: 80px;">box</div>
+  <div class="box" style="height: 80px;">box</div>
+</div>
+
+</body>
+</html>
